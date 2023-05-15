@@ -1,14 +1,11 @@
 # Restaurant_API_Project
 
-***********  API End Points  ***************
+## User registration and token generation endpoints 
+For user registration and token generation. It provides the following functionalities:
 
-http://127.0.0.1:8000/api/menu-items/
-     -> GET all menu items
-     -> POST a new user item
-     
-http://127.0.0.1:8000/api/menu-items/<int: pk>
-     -> GET an individual menu item
-     -> UPDATE an individual menu item
+- User registration: **/api/users** (POST) - Creates a new user with name, email, and password.
+- Get current user: **/api/users/users/me/** (GET) - Displays only the current user.
+- Token generation: **/token/login/** (POST) - Generates access tokens that can be used in other API calls in this project.
      
 
      
