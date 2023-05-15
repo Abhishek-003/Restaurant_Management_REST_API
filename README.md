@@ -3,6 +3,34 @@
 ## Description
 This project is a REST API project built with Django REST Framework. It provides endpoints for various functionalities related to user registration, token generation, menu item management, user group management, cart management, and order management. The project supports different user roles, including customers, managers, and delivery crew, with different permissions and access levels.
 
+## Installation
+1. Clone the repository:
+<pre>
+git clone https://github.com/your-username/your-repository.git
+</pre>
+
+2. Change into the project directory:
+<pre>
+cd your-repository
+</pre>
+
+3. Install the dependencies:
+<pre>
+pip install -r requirements.txt
+</pre>
+
+4. Configure the project by providing the necessary environment variables (if any).
+5. Run the migrations:
+<pre>
+python manage.py migrate
+</pre>
+
+6. Start the development server:
+<pre>
+python manage.py runserver
+</pre>
+
+
 ## User registration and token generation endpoints 
 For user registration and token generation. It provides the following functionalities:
 
