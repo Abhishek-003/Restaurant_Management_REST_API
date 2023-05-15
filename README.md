@@ -9,12 +9,15 @@ For user registration and token generation. It provides the following functional
 
 Example request for User Registration
 <pre>
-'POST /api/users/'
-  -H 'Content-Type: application/json'
-  -d '{
-    "username": "john.doe@example.com",
-    "password": "password123"
-  }'
+POST /api/users/
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
 </pre>
      
 
