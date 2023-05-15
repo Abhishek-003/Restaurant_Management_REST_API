@@ -69,5 +69,44 @@ Endpoints for managing menu items. It supports various operations based on user 
 - Method: DELETE
 - Purpose: Deletes a menu item.
 
+## User Group Management Endpoints
+Endpoints for managing user groups. It includes functionalities for managing managers and delivery crew. The following endpoints and functionalities are available:
+
+### Get Managers
+- Endpoint: **/api/groups/manager/users**
+- Role: Manager
+- Method: GET
+- Purpose: Returns all managers.
+
+### Assign Manager
+- Endpoint: **/api/groups/manager/users**
+- Role: Manager
+- Method: POST
+- Purpose: Assigns the user in the payload to the manager group and returns 201 - Created.
+
+### Remove Manager
+- Endpoint: **/api/groups/manager/users/{userId}**
+- Role: Manager
+- Method: DELETE
+- Purpose: Removes this particular user from the manager group. Returns 200 - Success if everything is okay. If the user is not found, returns 404 - Not found.
+
+### Get Delivery Crew
+- Endpoint: **/api/groups/delivery-crew/users**
+- Role: Manager
+- Method: GET
+- Purpose: Returns all delivery crew.
+
+### Assign Delivery Crew
+- Endpoint: **/api/groups/delivery-crew/users**
+- Role: Manager
+- Method: POST
+- Purpose: Assigns the user in the payload to the delivery crew group and returns 201 - Created.
+
+### Remove Delivery Crew
+- Endpoint: **/api/groups/delivery-crew/users/{userId}**
+- Role: Manager
+- Method: DELETE
+- Purpose: Removes this user from the delivery crew group. Returns 200 - Success if everything is okay. If the user is not found, returns 404 - Not found.
+
 
      
