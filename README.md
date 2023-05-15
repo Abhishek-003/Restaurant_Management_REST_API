@@ -1,5 +1,8 @@
 # Restaurant_API_Project
 
+## Description
+This project is a REST API project built with Django REST Framework. It provides endpoints for various functionalities related to user registration, token generation, menu item management, user group management, cart management, and order management. The project supports different user roles, including customers, managers, and delivery crew, with different permissions and access levels.
+
 ## User registration and token generation endpoints 
 For user registration and token generation. It provides the following functionalities:
 
