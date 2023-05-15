@@ -50,5 +50,23 @@ Content-Type: application/json
 - Method: POST
 - Purpose: Creates a new menu item and returns 201 - Created HTTP status code.
 
+### Get Single Menu Item
+- Endpoint: **/api/menu-items/{menuItem}**
+- Role: Customer, Delivery Crew, Manager
+- Method: GET
+- Purpose: Lists a single menu item.
+
+### Update Single Menu Item (Manager Only) - User with other role would get 403 - Unauthorized HTTP status code.
+- Endpoint: **/api/menu-items/{menuItem}**
+- Role: Manager
+- Methods: PUT, PATCH
+- Purpose: Updates a single menu item.
+
+### Delete Menu Item (Manager Only) - User with other role would get 403 - Unauthorized HTTP status code.
+- Endpoint: /api/menu-items/{menuItem}
+- Role: Manager
+- Method: DELETE
+- Purpose: Deletes a menu item.
+
 
      
