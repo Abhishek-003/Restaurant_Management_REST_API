@@ -7,17 +7,32 @@ For user registration and token generation. It provides the following functional
 - Get current user: **/api/users/users/me/** (GET) - Displays only the current user.
 - Token generation: **/token/login/** (POST) - Generates access tokens that can be used in other API calls in this project.
 
-Example request for User Registration
+### Example request for User Registration
 <pre>
 POST /api/users/
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "username": "john.doe@example.com",
   "password": "password123"
 }
+</pre>
 
+### Example request for Get current user
+<pre>
+GET /api/users/users/me/
+Authorization: Bearer <user-token>
+</pre>
+
+### Example request for Token generation
+<pre>
+POST /token/login/
+Content-Type: application/json
+
+{
+  "username": "john.doe",
+  "password": "password123"
+}
 </pre>
      
 
