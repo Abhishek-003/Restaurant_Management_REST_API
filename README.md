@@ -34,6 +34,21 @@ Content-Type: application/json
   "password": "password123"
 }
 </pre>
-     
+
+
+## Menu items endpoints                                                                                                                                                    Endpoints for managing menu items. It supports various operations based on user roles. The following endpoints and functionalities are available:
+
+### List Menu Items
+- Endpoint: **/api/menu-items**
+- Role: Customer, Manager, Delivery Crew
+- Method: GET
+- Purpose: Lists all menu items. Returns a 200 - Ok HTTP status code.
+
+### Create Menu Item (Manager Only) - User with other role would get 403 - Unauthorized HTTP status code.
+- Endpoint: **/api/menu-items**
+- Role: Manager
+- Method: POST
+- Purpose: Creates a new menu item and returns 201 - Created HTTP status code.
+
 
      
