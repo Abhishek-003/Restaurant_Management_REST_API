@@ -9,7 +9,7 @@ For user registration and token generation. It provides the following functional
 
 Example request for User Registration
 <pre>
-echo 'POST /api/users/'
+'POST /api/users/'
   -H 'Content-Type: application/json'
   -d '{
     "username": "john.doe@example.com",
