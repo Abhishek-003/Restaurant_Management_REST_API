@@ -108,5 +108,77 @@ Endpoints for managing user groups. It includes functionalities for managing man
 - Method: DELETE
 - Purpose: Removes this user from the delivery crew group. Returns 200 - Success if everything is okay. If the user is not found, returns 404 - Not found.
 
+## Cart Management Endpoints
+Endpoints for managing a cart. It allows customers to add menu items to their cart, view the current items in the cart, and delete all items from the cart. The following endpoints and functionalities are available:
+
+### Get Cart Items
+- Endpoint: **/api/cart/menu-items**
+- Role: Customer
+- Method: GET
+- Purpose: Returns the current items in the cart for the authenticated user token.
+
+### Add to Cart
+- Endpoint: **/api/cart/menu-items**
+- Role: Customer
+- Method: POST
+- Purpose: Adds the menu item to the cart and sets the authenticated user as the user ID for these cart items.
+
+### Empty Cart
+- Endpoint: **/api/cart/menu-items**
+- Role: Customer
+- Method: DELETE
+- Purpose: Deletes all menu items created by the current user token, effectively emptying the cart.
+
+## Order Management Endpoints
+Endpoints for managing orders. It allows customers, managers, and delivery crew to perform various operations related to orders. The following endpoints and functionalities are available:
+
+### Get User Orders
+- Endpoint: **/api/orders**
+- Role: Customer
+- Method: GET
+- Purpose: Returns all orders with order items created by the current user.
+
+### Create Order
+- Endpoint: **/api/orders**
+- Role: Customer
+- Method: POST
+- Purpose: Creates a new order item for the current user. It retrieves the current cart items from the cart endpoints and adds those items to the order items table. Then it deletes all items from the cart for this user.
+
+### Get Order Items
+- Endpoint: **/api/orders/{orderId}**
+- Role: Customer
+- Method: GET
+- Purpose: Returns all items for the specified order ID. If the order ID doesn't belong to the current user, it displays an appropriate HTTP error status code.
+
+### Get All Orders
+- Endpoint: **/api/orders**
+- Role: Manager
+- Method: GET
+- Purpose: Returns all orders with order items for all users.
+
+### Update Order
+- Endpoint: **/api/orders/{orderId}**
+- Role: Customer
+- Method: PATCH
+- Purpose: Updates the specified order. A manager can use this endpoint to set a delivery crew for this order and update the order status to indicate if it is out for delivery or has been delivered.
+
+### Delete Order
+- Endpoint: **/api/orders/{orderId}**
+- Role: Manager
+- Method: DELETE
+- Purpose: Deletes the specified order.
+
+### Get Orders Assigned to Delivery Crew
+- Endpoint: **/api/orders**
+- Role: Delivery crew
+- Method: GET
+- Purpose: Returns all orders with order items assigned to the delivery crew.
+
+### Update Order Status (Delivery Crew)
+- Endpoint: **/api/orders/{orderId}**
+- Role: Delivery crew
+- Method: PATCH
+- Purpose: Updates the order status to indicate if it is out for delivery or has been delivered. The delivery crew can only update the order status and cannot modify anything else in the order.
+
 
      
