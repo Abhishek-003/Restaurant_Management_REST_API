@@ -63,7 +63,7 @@ Content-Type: application/json
 - Purpose: Updates a single menu item.
 
 ### Delete Menu Item (Manager Only) - User with other role would get 403 - Unauthorized HTTP status code.
-- Endpoint: /api/menu-items/{menuItem}
+- Endpoint: **/api/menu-items/{menuItem}**
 - Role: Manager
 - Method: DELETE
 - Purpose: Deletes a menu item.
