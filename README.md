@@ -36,7 +36,7 @@ Content-Type: application/json
 </pre>
 
 
-## Menu items endpoints                                                                                                                                                    Endpoints for managing menu items. It supports various operations based on user roles. The following endpoints and functionalities are available:
+## Menu items endpoints                                                                                                                                                Endpoints for managing menu items. It supports various operations based on user roles. The following endpoints and functionalities are available:
 
 ### List Menu Items
 - Endpoint: **/api/menu-items**
